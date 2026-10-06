@@ -1,0 +1,24 @@
+{
+  "name": "pi-durable-sentry",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --import ./instrument.mjs app.mjs"
+  },
+  "dependencies": {
+    "@earendil-works/chord": "^1.0.4",
+    "@earendil-works/pi-ai": "^1.0.4",
+    "@earendil-works/pi-durable": "^1.0.4",
+    "@sentry/node": "link:../../sentry-javascript/packages/node"
+  },
+  "volta": {
+    "node": "24.21.0"
+  },
+  "resolutions": {
+    "@sentry/core": "link:../../sentry-javascript/packages/core",
+    "@sentry/opentelemetry": "link:../../sentry-javascript/packages/opentelemetry",
+    "@sentry/server-runtime-injection": "link:../../sentry-javascript/packages/server-runtime-injection",
+    "@sentry/server-utils": "link:../../sentry-javascript/packages/server-utils",
+    "@sentry/bundler-plugins": "link:../../sentry-javascript/packages/bundler-plugins"
+  }
+}
